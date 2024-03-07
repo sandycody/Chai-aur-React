@@ -17,6 +17,8 @@ function App() {
 
     // Check where counter value not more than 20 is shown on browser
     if (counter <= 19) {
+      // setCounter(counter - 1);
+
       //setCounter mein ek callback function milta ha
       setCounter(prevCounter => prevCounter + 1);
       setCounter(prevCounter => prevCounter + 1);
@@ -33,10 +35,11 @@ function App() {
     // Check where negative value of counter is not shown on browser
     if (counter >= 1) {
       // setCounter(counter - 1);
-      setCounter((prevCounter) => prevCounter - 1);
-      setCounter((prevCounter) => prevCounter - 1);
-      setCounter((prevCounter) => prevCounter - 1);
-      setCounter((prevCounter) => prevCounter - 1);
+      
+      setCounter(prevCounter => prevCounter - 1);
+      setCounter(prevCounter => prevCounter - 1);
+      setCounter(prevCounter => prevCounter - 1);
+      setCounter(prevCounter => prevCounter - 1);
     }
   }
 
