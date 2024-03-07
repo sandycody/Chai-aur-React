@@ -8,7 +8,7 @@ import './App.css'
 function App() {
   // Using of useState hook --> The React useState hook allows us to track state in a function component. State generally refers to data or properties that need to be tracking in an application.
 
-  let [counter, setCounter] = useState(0); //yaha counter mein default value 5 hogi joki humne useState() mein di hai, we can give any default value in useState()
+  const [counter, setCounter] = useState(0); //yaha counter mein default value 5 hogi joki humne useState() mein di hai, we can give any default value in useState()
 
   // let counter = 5;
   // const h2 = document.querySelector('h2');
@@ -17,14 +17,26 @@ function App() {
 
     // Check where counter value not more than 20 is shown on browser
     if (counter <= 19) {
-      setCounter(counter + 1);
+      //setCounter mein ek callback function milta ha
+      setCounter(prevCounter => prevCounter + 1);
+      setCounter(prevCounter => prevCounter + 1);
+      setCounter(prevCounter => prevCounter + 1);
+      setCounter(prevCounter => prevCounter + 1);
+      setCounter(prevCounter => prevCounter + 1);
+      setCounter(prevCounter => prevCounter + 1);
+
+      // This is an interview question of react in which interviewer asks about setCounter and useState working by replicating setCounter function so many times and counter updation on clicking button
     }
   }
 
   const decreaseValue = () => {
     // Check where negative value of counter is not shown on browser
     if (counter >= 1) {
-      setCounter(counter - 1);
+      // setCounter(counter - 1);
+      setCounter((prevCounter) => prevCounter - 1);
+      setCounter((prevCounter) => prevCounter - 1);
+      setCounter((prevCounter) => prevCounter - 1);
+      setCounter((prevCounter) => prevCounter - 1);
     }
   }
 
