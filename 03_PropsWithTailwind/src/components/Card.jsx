@@ -2,7 +2,8 @@
 
 import React from 'react'
 
-function Card({ userName: name, src, designation: des, location: loc}) {
+// Instead of using props in function parameter as it is object, we can directly destructure it
+function Card({ userName: name, src, designation: des, location: loc }) {
     console.log("Username : ", name);
     console.log("Designation : ", des);
     console.log("Location : ", loc);
